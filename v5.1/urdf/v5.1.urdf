@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="v5.1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0504690235621813 -0.00437721637827637 0.176492565914244"
+        rpy="0 0 0" />
+      <mass
+        value="10.7219695893509" />
+      <inertia
+        ixx="0.0656660490550788"
+        ixy="-0.00023342373523305"
+        ixz="0.00132717220536754"
+        iyy="0.0852589857293555"
+        iyz="6.38933401108655E-06"
+        izz="0.0789731919088703" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="0.0148383171366371 0.000447683430937817 -0.0211536208297878"
+        rpy="0 0 0" />
+      <mass
+        value="0.0312409127406483" />
+      <inertia
+        ixx="8.88026370811003E-06"
+        ixy="-1.77664494330243E-07"
+        ixz="1.13027679917081E-07"
+        iyy="1.44910018205432E-05"
+        iyz="3.46076114996082E-08"
+        izz="2.25289099520269E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar"
+    type="fixed">
+    <origin
+      xyz="0.155666725643582 0.00112777065633451 0.146099999998099"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="-0.000128980117747868 -0.000191495597993169 -0.00384070509348666"
+        rpy="0 0 0" />
+      <mass
+        value="0.000999898118986841" />
+      <inertia
+        ixx="2.50447716935416E-08"
+        ixy="1.0396505624692E-10"
+        ixz="-2.68560481634646E-14"
+        iyy="1.24513535508531E-08"
+        iyz="-1.18565423490066E-14"
+        izz="3.06376353115898E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu"
+    type="fixed">
+    <origin
+      xyz="0.126428933055049 -0.100523077234269 0.0330200000034927"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.000243587829778402 -0.0295000990455644 8.01156363472444E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.981706650902443" />
+      <inertia
+        ixx="0.00165298875829609"
+        ixy="-1.01208993064455E-05"
+        ixz="-1.8168620653086E-09"
+        iyy="0.00287861061005824"
+        iyz="-1.35675311990675E-11"
+        izz="0.00165291235980834" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel"
+    type="continuous">
+    <origin
+      xyz="0.00157556970077044 -0.175020257687692 0.0150000000042175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="-0.00825691107326283 0.999965911128739 0" />
+  </joint>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.000243587829778624 0.0295000990455639 8.01149702134296E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.981706650902443" />
+      <inertia
+        ixx="0.00165299120834847"
+        ixy="-1.01249109871006E-05"
+        ixz="-1.44984115092953E-08"
+        iyy="0.00287861950901393"
+        iyz="7.25004217163637E-11"
+        izz="0.00165291988234476" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel"
+    type="continuous">
+    <origin
+      xyz="-0.00131434917487327 0.174967811207364 0.0150000000042175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0.00825691107326281 -0.999965911128739 0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="-0.0286974043856942 -0.00315323141543045 -0.00696427170361813"
+        rpy="0 0 0" />
+      <mass
+        value="0.646454884722171" />
+      <inertia
+        ixx="0.0028423827313704"
+        ixy="1.87273045722636E-05"
+        ixz="1.48075090936083E-07"
+        iyy="0.000263758634244186"
+        iyz="-3.33736128214345E-08"
+        izz="0.00296274058967308" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cam"
+    type="fixed">
+    <origin
+      xyz="0.264952270554911 0.00535821231736117 0.284425164615102"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="caster_frle_Link">
+    <inertial>
+      <origin
+        xyz="1.65138221474015E-05 -0.00199993182225411 1.27675647831893E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0148770120110745" />
+      <inertia
+        ixx="1.53085377929143E-06"
+        ixy="-8.6265278990257E-09"
+        ixz="4.06030491232852E-22"
+        iyy="2.57551147351535E-06"
+        iyz="-3.56752785981449E-21"
+        izz="1.53078254838952E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/caster_frle_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/caster_frle_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frle_caster"
+    type="continuous">
+    <origin
+      xyz="0.230383218672147 -0.084998630059868 -0.0479499999957926"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_frle_Link" />
+    <axis
+      xyz="-0.00825691107325917 0.999965911128739 0" />
+  </joint>
+  <link
+    name="caster_frrig_Link">
+    <inertial>
+      <origin
+        xyz="1.65138221472905E-05 -0.00199993182225411 1.33226762955019E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0148770120110745" />
+      <inertia
+        ixx="1.53085377929143E-06"
+        ixy="-8.62652789902565E-09"
+        ixz="3.97035577962783E-22"
+        iyy="2.57551147351535E-06"
+        iyz="-2.49751981781507E-21"
+        izz="1.53078254838952E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/caster_frrig_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/caster_frrig_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frrig_caster"
+    type="continuous">
+    <origin
+      xyz="0.2289465161454 0.0889954384765326 -0.0479499999957927"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_frrig_Link" />
+    <axis
+      xyz="-0.00825691107325917 0.999965911128739 0" />
+  </joint>
+  <link
+    name="caster_bale_Link">
+    <inertial>
+      <origin
+        xyz="-1.65138221470684E-05 0.001999931822254 1.38777878078145E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0148770120110745" />
+      <inertia
+        ixx="1.53085377929143E-06"
+        ixy="-8.62652789902388E-09"
+        ixz="-3.85935973626152E-22"
+        iyy="2.57551147351535E-06"
+        iyz="3.50565403842201E-21"
+        izz="1.53078254838952E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/caster_bale_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/caster_bale_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bale_caster"
+    type="continuous">
+    <origin
+      xyz="-0.228685295616864 -0.089047884956824 -0.0479499999957891"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_bale_Link" />
+    <axis
+      xyz="0.00825691107325364 -0.999965911128739 0" />
+  </joint>
+  <link
+    name="caster_barig_Link">
+    <inertial>
+      <origin
+        xyz="-1.65138221468464E-05 0.00199993182225394 1.33226762955019E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0148770120110745" />
+      <inertia
+        ixx="1.53085377929143E-06"
+        ixy="-8.62652789902401E-09"
+        ixz="-3.03228009790437E-22"
+        iyy="2.57551147351535E-06"
+        iyz="3.49833425677372E-21"
+        izz="1.53078254838952E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/caster_barig_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/caster_barig_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="barig_caster"
+    type="continuous">
+    <origin
+      xyz="-0.23012199814361 0.0849461835795765 -0.047949999995789"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_barig_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="frle_Link">
+    <inertial>
+      <origin
+        xyz="-0.00243927760199514 0 -0.0122411713493416"
+        rpy="0 0 0" />
+      <mass
+        value="0.00146243132498549" />
+      <inertia
+        ixx="2.77088330082138E-07"
+        ixy="-1.80118578383422E-22"
+        ixz="-4.80219091733957E-08"
+        iyy="2.17616225823839E-07"
+        iyz="-2.44114090827206E-22"
+        izz="1.42128082433692E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/frle_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/frle_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frle_joint"
+    type="continuous">
+    <origin
+      xyz="0.240339729506114 -0.084916417232767 -0.0124499999957849"
+      rpy="0 0 0.00825700489746226" />
+    <parent
+      link="base_link" />
+    <child
+      link="frle_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="frrig_Link">
+    <inertial>
+      <origin
+        xyz="-0.00243919444977492 -2.01408982427043E-05 -0.0122411713493417"
+        rpy="0 0 0" />
+      <mass
+        value="0.0014624313249855" />
+      <inertia
+        ixx="2.77084275477437E-07"
+        ixy="4.91039136659567E-10"
+        ixz="-4.80202721607161E-08"
+        iyy="2.17620280428541E-07"
+        iyz="-3.96512633613084E-10"
+        izz="1.42128082433692E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/frrig_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/frrig_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frrig_joint"
+    type="continuous">
+    <origin
+      xyz="0.238903026979367 0.0890776513036337 -0.0124499999957849"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="frrig_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="bale_Link">
+    <inertial>
+      <origin
+        xyz="0.00243919444977503 2.01408982427598E-05 -0.0122411713493416"
+        rpy="0 0 0" />
+      <mass
+        value="0.00146243132498551" />
+      <inertia
+        ixx="2.77084275477441E-07"
+        ixy="4.91039136659008E-10"
+        ixz="4.80202721607167E-08"
+        iyy="2.17620280428546E-07"
+        iyz="3.96512633613964E-10"
+        izz="1.42128082433692E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/bale_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/bale_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bale_joint"
+    type="continuous">
+    <origin
+      xyz="-0.238641806450831 -0.0891300977839249 -0.0124499999957813"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bale_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="barig_Link">
+    <inertial>
+      <origin
+        xyz="0.00243919444977503 2.01408982427043E-05 -0.0122411713493417"
+        rpy="0 0 0" />
+      <mass
+        value="0.00146243132498551" />
+      <inertia
+        ixx="2.77084275477441E-07"
+        ixy="4.91039136659184E-10"
+        ixz="4.80202721607167E-08"
+        iyy="2.17620280428546E-07"
+        iyz="3.96512633613896E-10"
+        izz="1.42128082433693E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/barig_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://v5.1/meshes/barig_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="barig_joint"
+    type="continuous">
+    <origin
+      xyz="-0.240078508977577 0.0848639707524755 -0.0124499999957812"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="barig_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
